@@ -6,13 +6,18 @@
     <title>Formulário</title>
 
     <style>
+        body{
+           font: arial; 
+        }
         fieldset {
             padding: 15px;
         }
         fieldset > div {
             margin-bottom: 15px;
         }
-
+        .caixamenor{
+            width: 60px;
+        }
     </style>
 </head>
 <body>
@@ -23,42 +28,82 @@
         <legend>Dados Pessoais </legend>
 
         <div>
-            <label for="nome">Nome completo:</label>
-            <input type="text" id="nome" name="nome_completo" placeholder="Digite seu nome completo">
+            <label for="nome">Nome completo:</label><br>
+            <input type="text" id="nome" name="nome_completo" placeholder="Digite seu nome completo" size="30">
         </div>
 
         <div>
-            <label for="email">Email:</label> 
+            <label for="email">Email:</label><br>
             <input type="email" id="email" name="email_usuario" placeholder="seuemail@exemplo.com">
         </div>
 
         <div>
-            <label for="telefone">Telefone (formato (XX)XXXXX-XXXX):</label> 
-            <input type="tel" id="telefone" name="telefone_usuario" placeholder="(11)91234-5678">
+            <label for="telefone">Telefone (formato (XX)XXXXX-XXXX):</label><br>
+            <input type="tel" id="telefone" name="telefone_usuario" placeholder="(11)91234-5678" pattern="\(\d{2}\)\d{4,5}-\d{4}">
         </div>
 
         <div>
-            <label for="senha">Crie uma senha:</label> 
+            <label for="senha">Crie uma senha:</label><br>
             <input type="password" id="senha" name="senha_usuario" placeholder="Digite sua senha">
         </div>
 
         <div>
-            <label for="idade">Idade:</label> 
-            <input type="number" id="idade" name="idade_usuario" placeholder="Sua idade">
+            <label for="idade">Idade:</label><br>
+            <input type="number" id="idade" name="idade_usuario" placeholder="Sua idade" class="caixamenor">
         </div>
 
         <div>
-            <label for="estado">Estado de entrega:</label> 
+            <label for="estado">Estado de entrega:</label><br>
             <select id="estado" name="estado_entrega">
-                <option value="">--Selecione seu estado--</option> 
-                <option value="SP">São Paulo</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="MG">Minas Gerais</option>
+                <option value="" disabled selected hidden>--Selecione seu estado--</option> 
+                
+                <optgroup label="Região Norte">
+                    <option value="AC">Acre</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="PA">Pará</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+        
+                <optgroup label="Região Nordeste">
+                    <option value="AL">Alagoas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+        
+                <optgroup label="Região Centro-Oeste">
+                    <option value="DF">Distrito Federal</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                </optgroup>
+        
+                <optgroup label="Região Sudeste">
+                    <option value="ES">Espírito Santo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+        
+                <optgroup label="Região Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
             </select> 
         </div>
+        
 
         <div>
-            <label for="cnh">Envie uma foto da sua CNH:</label> 
+            <label for="cnh">Envie uma foto da sua CNH:</label><br>
             <input type="file" id="cnh" name="foto_cnh">
         </div>
 
@@ -69,15 +114,15 @@
 
         <p>Escolha o modelo:</p>
         <div>
-            <input type="checkbox" id="seal" name="modelo_carro" value="seal">
+            <input type="radio" id="seal" name="modelo_carro" value="seal">
             <label for="seal">BYD Seal</label>
         </div>
         <div>
-            <input type="checkbox" id="han" name="modelo_carro" value="han">
+            <input type="radio" id="han" name="modelo_carro" value="han">
             <label for="han">BYD Han</label>
         </div>
         <div>
-            <input type="checkbox" id="song" name="modelo_carro" value="song">
+            <input type="radio" id="song" name="modelo_carro" value="song">
             <label for="song">BYD Song Plus</label>
         </div>
 
@@ -96,12 +141,12 @@
         </div>
 
         <div>
-            <label for="cor">Cor do carro:</label>
-            <input type="color" id="cor" name="cor_carro" value="#FFFFFF"> 
+            <label for="cor">Cor do carro:</label><br>
+            <input type="color" id="cor" name="cor_carro" value="#black"> 
         </div>
 
         <div>
-            <label for="brilho">Intensidade da cor (brilho):</label> 
+            <label for="brilho">Intensidade da cor (brilho):</label><br>
             <input type="range" id="brilho" name="brilho_cor" min="0" max="100" value="50"> 
         </div>
 
@@ -111,17 +156,17 @@
         <legend>Entrega </legend>
 
         <div>
-            <label for="data">Data desejada para entrega:</label> 
+            <label for="data">Data desejada para entrega:</label><br>
             <input type="date" id="data" name="data_entrega">
         </div>
 
         <div>
-            <label for="hora">Hora preferida para entrega:</label>
+            <label for="hora">Hora preferida para entrega:</label><br>
             <input type="time" id="hora" name="hora_entrega"> 
         </div>
 
         <div>
-            <label for="mes">Mês da compra:</label> 
+            <label for="mes">Mês da compra:</label><br>
             <input type="month" id="mes" name="mes_compra">
         </div>
 
@@ -131,7 +176,7 @@
         <legend>Sua Opinião </legend>
 
         <div>
-            <label for="expectativa">Conte qual é a sua expectativa sobre o carro:</label> <br>
+            <label for="expectativa">Conte qual é a sua expectativa sobre o carro:</label><br>
             <textarea id="expectativa" name="expectativa_usuario" rows="5" cols="40" placeholder="Exemplo: Espero que o carro tenha boa autonomia, seja confortável, silencioso e impressione os vizinhos!"></textarea> 
         </div>
 
@@ -141,18 +186,18 @@
         <legend>Avaliação dos Modelos BYD </legend>
 
         <div>
-            <label for="aval-dolphin">Avalie o BYD Dolphin Plus (0 a 5):</label> 
-            <input type="number" id="aval-dolphin" name="aval_dolphin" min="0" max="5">
+            <label for="aval-dolphin">Avalie o BYD Dolphin Plus:</label><br>
+            <input type="number" id="aval-dolphin" name="aval_dolphin" min="0" max="5" placeholder="0 a 5 estrelas" class="caixamenor">
         </div>
 
         <div>
-            <label for="aval-gs">Avalie o BYD GS (0 a 5):</label> 
-            <input type="number" id="aval-gs" name="aval_gs" min="0" max="5">
+            <label for="aval-gs">Avalie o BYD GS:</label><br>
+            <input type="number" id="aval-gs" name="aval_gs" min="0" max="5" placeholder="0 a 5 estrelas" class="caixamenor">
         </div>
 
         <div>
-            <label for="aval-mini">Avalie o BYD Mini (0 a 5):</label>
-            <input type="number" id="aval-mini" name="aval_mini" min="0" max="5">
+            <label for="aval-mini">Avalie o BYD Mini:</label><br>
+            <input type="number" id="aval-mini" name="aval_mini" min="0" max="5" placeholder="0 a 5 estrelas" class="caixamenor">
         </div>
 
     </fieldset>
