@@ -26,32 +26,32 @@
 
         <div>
             <label for="nome">Nome completo:</label><br>
-            <input type="text" id="nome" name="nome_completo" placeholder="Digite seu nome completo" size="30">
+            <input type="text" id="nome" name="nome_completo" placeholder="Digite seu nome completo" size="30" required>
         </div>
 
         <div>
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email_usuario" placeholder="seuemail@exemplo.com">
+            <input type="email" id="email" name="email_usuario" placeholder="seuemail@exemplo.com" required>
         </div>
 
         <div>
             <label for="telefone">Telefone (formato (XX)XXXXX-XXXX):</label><br>
-            <input type="tel" id="telefone" name="telefone_usuario" placeholder="(11)91234-5678" pattern="\(\d{2}\)\d{4,5}-\d{4}">
+            <input type="tel" id="telefone" name="telefone_usuario" placeholder="(11)91234-5678" pattern="\(\d{2}\)\d{4,5}-\d{4}" required>
         </div>
 
         <div>
             <label for="senha">Crie uma senha:</label><br>
-            <input type="password" id="senha" name="senha_usuario" placeholder="Digite sua senha">
+            <input type="password" id="senha" name="senha_usuario" placeholder="Digite sua senha" required>
         </div>
 
         <div>
             <label for="idade">Idade:</label><br>
-            <input type="number" id="idade" name="idade_usuario" placeholder="Sua idade" class="caixamenor">
+            <input type="number" id="idade" name="idade_usuario" placeholder="Sua idade" class="caixamenor" required>
         </div>
 
         <div>
             <label for="estado">Estado de entrega:</label><br>
-            <select id="estado" name="estado_entrega">
+            <select id="estado" name="estado_entrega" required>
                 <option value="" disabled selected hidden>--Selecione seu estado--</option> 
                 
                 <optgroup label="Região Norte">
@@ -101,7 +101,7 @@
 
         <div>
             <label for="cnh">Envie uma foto da sua CNH:</label><br>
-            <input type="file" id="cnh" name="foto_cnh">
+            <input type="file" id="cnh" name="foto_cnh" required>
         </div>
 
     </fieldset>
@@ -111,15 +111,15 @@
 
         <p>Escolha o modelo:</p>
         <div>
-            <input type="radio" id="seal" name="modelo_carro" value="seal">
+            <input type="radio" id="seal" name="modelo_carro" value="seal" required>
             <label for="seal">BYD Seal</label>
         </div>
         <div>
-            <input type="radio" id="han" name="modelo_carro" value="han">
+            <input type="radio" id="han" name="modelo_carro" value="han" required>
             <label for="han">BYD Han</label>
         </div>
         <div>
-            <input type="radio" id="song" name="modelo_carro" value="song">
+            <input type="radio" id="song" name="modelo_carro" value="song" required>
             <label for="song">BYD Song Plus</label>
         </div>
 
@@ -139,12 +139,12 @@
 
         <div>
             <label for="cor">Cor do carro:</label><br>
-            <input type="color" id="cor" name="cor_carro" value="#000000"> 
+            <input type="color" id="cor" name="cor_carro" value="#000000" required> 
         </div>
 
         <div>
             <label for="brilho">Intensidade da cor (brilho):</label><br>
-            <input type="range" id="brilho" name="brilho_cor" min="0" max="100" value="50"> 
+            <input type="range" id="brilho" name="brilho_cor" min="0" max="100" value="50" required> 
         </div>
 
     </fieldset>
@@ -154,17 +154,17 @@
 
         <div>
             <label for="data">Data desejada para entrega:</label><br>
-            <input type="date" id="data" name="data_entrega">
+            <input type="date" id="data" name="data_entrega" required>
         </div>
 
         <div>
             <label for="hora">Hora preferida para entrega:</label><br>
-            <input type="time" id="hora" name="hora_entrega"> 
+            <input type="time" id="hora" name="hora_entrega" required> 
         </div>
 
         <div>
             <label for="mes">Mês da compra:</label><br>
-            <input type="month" id="mes" name="mes_compra">
+            <input type="month" id="mes" name="mes_compra" required>
         </div>
 
     </fieldset>
@@ -174,7 +174,7 @@
 
         <div>
             <label for="expectativa">Conte qual é a sua expectativa sobre o carro:</label><br>
-            <textarea id="expectativa" name="expectativa_usuario" rows="5" cols="40" placeholder="Exemplo: Espero que o carro tenha boa autonomia, seja confortável, silencioso e impressione os vizinhos!"></textarea> 
+            <textarea id="expectativa" name="expectativa_usuario" rows="5" cols="40" placeholder="Exemplo: Espero que o carro tenha boa autonomia, seja confortável, silencioso e impressione os vizinhos!" required></textarea> 
         </div>
 
     </fieldset>
@@ -184,17 +184,17 @@
 
         <div>
             <label for="aval-dolphin">Avalie o BYD Dolphin Plus:</label><br>
-            <input type="number" id="aval-dolphin" name="aval_dolphin" min="0" max="5" placeholder="0 a 5 estrelas" class="caixamenor">
+            <input type="number" id="aval-dolphin" name="aval_dolphin" min="0" max="5" placeholder="0 a 5 estrelas" class="caixamenor" required>
         </div>
 
         <div>
             <label for="aval-gs">Avalie o BYD GS:</label><br>
-            <input type="number" id="aval-gs" name="aval_gs" min="0" max="5" placeholder="0 a 5 estrelas" class="caixamenor">
+            <input type="number" id="aval-gs" name="aval_gs" min="0" max="5" placeholder="0 a 5 estrelas" class="caixamenor" required>
         </div>
 
         <div>
             <label for="aval-mini">Avalie o BYD Mini:</label><br>
-            <input type="number" id="aval-mini" name="aval_mini" min="0" max="5" placeholder="0 a 5 estrelas" class="caixamenor">
+            <input type="number" id="aval-mini" name="aval_mini" min="0" max="5" placeholder="0 a 5 estrelas" class="caixamenor" required>
         </div>
 
     </fieldset>
